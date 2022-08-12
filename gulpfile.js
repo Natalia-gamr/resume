@@ -5,8 +5,12 @@ const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 const htmlmin = require('gulp-htmlmin');
-const ghPages = require('gh-pages'); 
-const path = require('path');
+var ghpages = require('gh-pages');
+
+ghpages.publish('dist', {
+    branch: 'main',
+    repo: 'https://github.com/Natalia-gamr/resume'
+  }, callback);
 
 // import imagemin from 'gulp-imagemin';
 
