@@ -5,9 +5,12 @@ const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 const htmlmin = require('gulp-htmlmin');
-const ghPages = require('gh-pages'); 
-const path = require('path');
-
+var ghPages = require('gulp-gh-pages');
+ 
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+})
 // import imagemin from 'gulp-imagemin';
 
 gulp.task('server', function() {
@@ -67,9 +70,6 @@ gulp.task('images', function() {
     // .pipe(imagemin())
     .pipe(gulp.dest("dist/img"));
 });
-function deploy(cb) {
-    ghPages.publish(path.join(process.cwd(), './build'), cb);
-  }
-  exports.deploy = deploy;
+
 
 gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'html', 'scripts', 'fonts', 'icons', 'mailer', 'images'));

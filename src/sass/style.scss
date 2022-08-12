@@ -20,9 +20,10 @@ a {
     color: black;
 }
 .container {
-    width: 1110px;
+    max-width: 1110px;
     margin: 0 auto;
     display: flex;
+    width: 100%;
 }
 .block {
     background-color: #26594A;
@@ -31,14 +32,14 @@ a {
     display: block;
     position: relative;
     &__img {
-        margin: 0 auto;
         width: 250px;
         height: 250px;
-        background-size: cover;
-        background-position-x: -84px;
         border-radius: 50%;
-        background-repeat: no-repeat;
-        background-image: url(../img/resume.jpg);
+        overflow: hidden;
+        img {
+            height: 100%;
+            margin-left: -83px;
+        }
      }
     &__item {
         font-size: 20px;
@@ -189,6 +190,18 @@ a {
             height: 15px;
             background-image: url(../icons/caret-right-fill.svg);
         }
+    }
+}
+
+@media (max-width:768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media (max-width:480px) {
+    .container {
+        max-width: 480px;
     }
 }
 
