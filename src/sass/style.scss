@@ -20,9 +20,10 @@ a {
     color: black;
 }
 .container {
-    width: 1110px;
+    max-width: 1110px;
     margin: 0 auto;
     display: flex;
+    width: 100%;
 }
 .block {
     background-color: #26594A;
@@ -31,14 +32,14 @@ a {
     display: block;
     position: relative;
     &__img {
-        margin: 0 auto;
         width: 250px;
         height: 250px;
-        background-size: cover;
-        background-position-x: -84px;
         border-radius: 50%;
-        background-repeat: no-repeat;
-        background-image: url(../img/resume.jpg);
+        overflow: hidden;
+        img {
+            height: 100%;
+            margin-left: -83px;
+        }
      }
     &__item {
         font-size: 20px;
@@ -155,6 +156,12 @@ a {
         &_items {
             padding: 40px;
         }
+        a {
+            display: block;
+        }
+        img {
+           width: 100%;
+        }
     }
 }
 .slick {
@@ -169,7 +176,7 @@ a {
         color:rgba($color: #000000, $alpha: 0)
     }
     &-prev {
-        top: 33%;
+        top: 43%;
         left: -20px;
         &::before {
             content: '';
@@ -180,7 +187,7 @@ a {
         }
     }
     &-next {
-        top: 33%;
+        top: 43%;
         right: -20px;
         &::before {
             content: '';
@@ -189,6 +196,18 @@ a {
             height: 15px;
             background-image: url(../icons/caret-right-fill.svg);
         }
+    }
+}
+
+@media (max-width:768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media (max-width:480px) {
+    .container {
+        max-width: 480px;
     }
 }
 
