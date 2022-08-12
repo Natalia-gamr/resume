@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+h1 {
+  font-size: 64px; 
+  position: relative; 
+}
+h2 {
+    font-size: 36px;
+}
+h3 {
+    font-size: 24px;
+    font-weight: normal;
+    text-transform: uppercase;
+
+}
+a {
+    display: block;
+    color: black;
+}
+.container {
+    width: 1110px;
+    margin: 0 auto;
+    display: flex;
+}
+.block {
+    background-color: #26594A;
+    padding: 80px 20px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    &__img {
+        margin: 0 auto;
+        width: 250px;
+        height: 250px;
+        background-size: cover;
+        background-position-x: -84px;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-image: url(../img/resume.jpg);
+     }
+    &__item {
+        font-size: 20px;
+        margin-top: 70px;
+        text-align: center;
+        color: white;
+        
+    }
+    &__title {
+        padding: 5px;
+        border: 1px solid white;
+    }
+    &__skills {
+        margin-top: 20px;
+        &_item {
+            position: relative;
+            text-align: left;
+            padding:10px ;
+            font-size: 20px;
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background: white;
+                top: 17px;
+                left: -3px;
+            }
+        }
+    }
+    &__contacts {
+        a {
+            color: white;
+            padding: 10px;
+        }
+    }
+    &__social {
+        display: flex;
+        justify-content: center;
+    }
+}
+.main {
+    &__header {
+        margin-top: 70px;
+        background: #add2c7;
+        padding: 30px 0;
+        text-align: center;
+        h1:after {
+            content: '';
+            width: 435px;
+            height: 4px;
+            background: black;
+            display: block;
+            position: absolute;
+            bottom: -13px;
+            left: 25%;
+        }
+    }
+    &__info {
+        width: 100%;
+        img {
+            width: 250px;
+        }
+    }
+    &__item {
+        margin-bottom: 40px;
+        padding-left: 40px;
+        margin-top: 30px;
+        display: block;
+    }
+    &__title {
+        text-align: center;
+        margin: 0 auto;
+        width: 50%;
+        padding: 5px;
+        border: 1px solid black;
+    }
+    &__descr {
+        display: block;
+        padding-top: 25px;
+        ul {
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            padding: 0;
+            li {
+                list-style-type: none;
+                padding-top: 10px;
+                font-size: 16px;
+                font-weight: normal;
+                text-align: left;
+                position: relative;
+                padding-left: 15px;                    
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 5px;
+                    height: 5px;
+                    border: 1px solid black;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 16px;
+                    left: 0;
+                }
+            }
+        }
+    }
+    &__gallery {
+        font-size:18px;
+        font-weight: 600;
+        text-align: center;
+        &_items {
+            padding: 40px;
+        }
+    }
+}
+.slick {
+    &-slider {
+        width: 850px;
+    }
+    
+    &-prev, &-next {
+        position: absolute;
+        border: none;
+        background: rgba($color: #000000, $alpha: 0);
+        color:rgba($color: #000000, $alpha: 0)
+    }
+    &-prev {
+        top: 33%;
+        left: -20px;
+        &::before {
+            content: '';
+            display: block;
+            width: 15px;
+            height: 15px;
+            background-image: url(../icons/caret-left-fill.svg);
+        }
+    }
+    &-next {
+        top: 33%;
+        right: -20px;
+        &::before {
+            content: '';
+            display: block;
+            width: 15px;
+            height: 15px;
+            background-image: url(../icons/caret-right-fill.svg);
+        }
+    }
+}
+
