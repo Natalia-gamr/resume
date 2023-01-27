@@ -200,13 +200,13 @@ a {
 }
 
 @media (max-width:768px) {
-    .container {
+    body {
         max-width: 768px;
     }
 }
 
 @media (max-width:480px) {
-    .container {
+    body {
         max-width: 480px;
     }
 }
